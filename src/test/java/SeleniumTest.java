@@ -1,3 +1,4 @@
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.InvalidArgumentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,6 +17,9 @@ public class SeleniumTest {
         InternetExplorerOptions options = new InternetExplorerOptions();
         options.withInitialBrowserUrl("https://www.google.pl/");*/
         WebDriver driver = getDriver("chrome");
+        driver.manage().window().maximize();
+        Dimension windowSize = new Dimension(200, 200);
+        driver.manage().window().setSize(windowSize);
         driver.get("https://www.google.pl/");
     }
 
