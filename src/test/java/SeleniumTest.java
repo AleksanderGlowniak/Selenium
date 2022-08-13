@@ -15,15 +15,15 @@ public class SeleniumTest {
         System.setProperty("webdriver.ie.driver", path);
         InternetExplorerOptions options = new InternetExplorerOptions();
         options.withInitialBrowserUrl("https://www.google.pl/");*/
-        WebDriver driver = getDriver("chromek");
+        WebDriver driver = getDriver("chrome");
         driver.get("https://www.google.pl/");
     }
 
     public WebDriver getDriver(String browser){
        switch (browser){
            case "chrome":
-               String chromePath = "C:\\Users\\olo88\\Desktop\\Selenium\\drivery\\chromedriver.exe";
-               System.setProperty("webdriver.chrome.driver", chromePath);
+            //   String chromePath = "C:\\Users\\olo88\\Desktop\\Selenium\\drivery\\chromedriver.exe";
+            //   System.setProperty("webdriver.chrome.driver", chromePath);
                return new ChromeDriver();
            case "firefox":
                String firefoxPath = "C:\\Users\\olo88\\Desktop\\Selenium\\drivery\\geckodriver.exe";
